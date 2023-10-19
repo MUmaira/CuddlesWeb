@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Header from './components/Header';
 import SideBar from './components/SideBar';
@@ -8,7 +7,8 @@ import Doctors from './pages/Doctors';
 import Insights from './pages/Insights';
 import Emergency from './pages/Emergency';
 import Schedule from './pages/Schedule';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 function App() {
   return (
     <BrowserRouter>
