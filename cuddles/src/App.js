@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
@@ -13,7 +12,6 @@ import Login from "./pages/Authentication/Login";
 import Signup from "./pages/Authentication/Signup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Layout from './components/Layout';
@@ -25,8 +23,7 @@ function App() {
     <BrowserRouter>
     <LoaderProvider>
     <div className="App">
-        <Header/>
-        <SideBar/>
+        <Layout/>
         <Routes>
         <Route exact path='/' Component={Login}/>
         <Route path="/signup" Component={Signup} />
