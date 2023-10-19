@@ -1,6 +1,4 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-//import Header from './components/Header';
-//import SideBar from './components/SideBar';
 import Dashboard from './pages/Dashboard';
 import Account from './pages/Account';
 import Doctors from './pages/Doctors';
@@ -10,13 +8,12 @@ import Schedule from './pages/Schedule';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Layout from './components/Layout';
-///import Navigation from './components/Navigation';
+import EmergencyDetails from './components/EmergencyDetails';
+
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-        {/*<Header/>
-        <SideBar/>*/}
         <Layout/>
         <Routes>
         <Route exact path='/' Component={Dashboard}/>
@@ -24,6 +21,7 @@ function App() {
         <Route path='/doctors' Component={Doctors}/>
         <Route path='/insights' Component={Insights}/>
         <Route path='/emergency' Component={Emergency}/>
+        <Route path='/emergency/:id' Component={EmergencyDetails}/>
         <Route path='/schedule' Component={Schedule}/>
         </Routes>
     </div>
