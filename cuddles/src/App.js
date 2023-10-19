@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Header from './components/Header';
-import SideBar from './components/SideBar';
+//import Header from './components/Header';
+//import SideBar from './components/SideBar';
 import Dashboard from './pages/Dashboard';
 import Account from './pages/Account';
 import Doctors from './pages/Doctors';
@@ -9,12 +9,15 @@ import Emergency from './pages/Emergency';
 import Schedule from './pages/Schedule';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Layout from './components/Layout';
+///import Navigation from './components/Navigation';
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-        <Header/>
-        <SideBar/>
+        {/*<Header/>
+        <SideBar/>*/}
+        <Layout/>
         <Routes>
         <Route exact path='/' Component={Dashboard}/>
         <Route path='/account' Component={Account}/>
