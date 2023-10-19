@@ -37,7 +37,7 @@ const EmergencyForm = () => {
                   Details
               </Form.Label>
             <Col sm={10}>
-               <Form.Control as="textarea" rows={5} placeholder="Address" />
+               <Form.Control as="textarea" rows={5} placeholder="Emergency Details" />
              </Col>
            </Form.Group>
            <Col>
