@@ -9,7 +9,7 @@ const Header = () => {
   return (
      <div className='headerContainer'>
          <div className='headerStyle'>
-         <h2>De Soyza Maternity Hospital - Colombo</h2>      
+         <h3>De Soyza Maternity Hospital - Colombo</h3>      
          </div>
          <div>
             <img src={headerImage} className='imageStyle' alt='header'/>

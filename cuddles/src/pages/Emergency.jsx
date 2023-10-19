@@ -1,9 +1,18 @@
 import React from 'react'
+import EmergencyForm from '../components/EmergencyForm'
+import StatCard from '../components/StatCard'
+import PatientList from '../components/PatientList'
 
 const Emergency = () => {
   return (
     <div>
-      <h2>Emeregncy</h2>
+      <div>
+        <StatCard/>
+      </div>
+      <div>
+        <PatientList/>
+      </div>
+      <EmergencyForm/>
     </div>
   )
 }
