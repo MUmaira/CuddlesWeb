@@ -1,0 +1,70 @@
+.regTitle {
+    margin-top: 4.5%;
+    font-size: 25px;
+    margin-left: 11%;
+    margin-bottom: 1.5%;
+    color: gray;
+}
+
+.regInput{
+    width: 20%;
+    border-color: '#0694BA';
+    padding: 8px;
+    margin-top: 15px;
+    margin-left: 4.5%;
+    margin-bottom: 10px;
+}
+
+.loginPassword{
+    width: 20%;
+    border-color: '#0694BA';
+    padding: 8px;
+    margin-top: 15px;
+    margin-left: 2%;
+    margin-bottom: 10px;
+}
+
+.labelText{
+    font-size: 20px;
+}
+
+.divContainer{
+    margin-left: 2.5%;
+}
+
+.passwordContainer{
+    margin-left: 1%;
+}
+
+.contactContainer{
+    margin-right: 2%;
+    
+}
+
+.regButton{
+    padding: 7px;
+    width: 10%;
+    font-size: 15px;
+    margin-right: 1%;
+    font-weight: bold;
+    margin-left: 0%;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.textClick{
+    cursor: pointer;
+    color: #0694BA;
+    margin-left: 0.8%;
+    font-size: 18px;
+}
+
+.btnDiv{
+    margin-left: 10%;
+}
+
+.haveAccount{
+    margin-left: 7.5%;
+}
+
