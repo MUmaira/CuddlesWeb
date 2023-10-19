@@ -6,8 +6,13 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLocationArrow, faPhone} from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+
 
 const EmergencyForm = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <Card style={{marginRight:"50px",marginTop:"20px",marginLeft:"500px",marginBottom:"10px",width:"40%", boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',background:"tranparent",zIndex:"1", borderColor:'#FF9494'}}>
@@ -41,7 +46,7 @@ const EmergencyForm = () => {
              </Col>
            </Form.Group>
            <Col>
-           <Button style={{marginRight:'135px', backgroundColor:'white', color:'#9F678C',  borderColor:'#9F678C',marginTop:'30px'}}>View Location
+           <Button onClick={()=> navigate(`/emergency/123`)} style={{marginRight:'135px', backgroundColor:'white', color:'#9F678C',  borderColor:'#9F678C',marginTop:'30px'}}>View Location
            <FontAwesomeIcon icon={faLocationArrow} style={{marginLeft:'10px'}} />
            </Button>
            <Button  style={{marginLeft:'80px', color:'white', backgroundColor:'#E88B6B', borderColor:'#E88B6B',marginTop:'30px'}}>Contact Patient
