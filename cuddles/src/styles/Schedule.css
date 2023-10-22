@@ -1,0 +1,36 @@
+.dropdown {
+  border: 1px solid #9f678c;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  width: 180px;
+  margin-top: 30px;
+  margin-left: 70px;
+  display: inline-block;
+}
+
+.dropdown select {
+  border: none;
+  outline: none;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-content {
+  margin-top: 15px;
+  margin-left: 280px;
+  flex: 3;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.right-content {
+  margin-top: 45px;
+  margin-right: 15px;
+  flex: 1;
+  padding: 30px;
+  background-color: #e0e0e0;
+}
