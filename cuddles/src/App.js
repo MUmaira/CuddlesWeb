@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Layout from "./components/Layout";
 import EmergencyDetails from "./components/EmergencyDetails";
+import AddDoctor from "./pages/AddDoctor";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/emergency" Component={Emergency} />
             <Route path="/emergency/:id" Component={EmergencyDetails} />
             <Route path="/schedule" Component={Schedule} />
+            <Route path="/addDoctor" Component={AddDoctor} />
           </Routes>
           <ToastContainer />
         </div>
