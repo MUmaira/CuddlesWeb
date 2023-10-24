@@ -1,68 +1,85 @@
 .sidebar {
-    width: 250px;
-    background-color: #9f678c;
-    color: #fff;
-    padding: 20px;
-    border-top-right-radius: 30px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    border-bottom-right-radius: 30px;
-    height: 100%; /* Set sidebar to full height */
-    z-index: 1;
-    position: fixed;
-  }
+  width: 250px;
+  background-color: #9f678c;
+  color: #fff;
+  padding: 20px;
+  border-top-right-radius: 30px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-bottom-right-radius: 30px;
+  height: 100%; /* Set sidebar to full height */
+  z-index: 1;
+  position: fixed;
+}
 
-  
-  .logo img {
-    width: 220px;
-    margin-top: -50px;
-  }
-  
-  .profile img {
-    width: 150px;
-    object-fit: cover;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 45px;
-  }
-  
-  .tabs {
-    margin-top: 30px;
-  }
-  
-  .tab {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 10px;
-    cursor: pointer;
-    color: #000000;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .tab span {
-    margin-left: 40px;
-  }
-  
-  .tab:hover {
-    background-color: #9f678c;
-    color: #fff;
-  }
-  
-  .para1 {
-    font-weight: bold;
-    font-size: 16;
-    align-self: center;
-    margin-bottom: 10px;
-    margin-left: 60px;
-  }
-  
-  .para2 {
-    margin-left: 40px;
-    margin-bottom: 70px;
-  }
-  
+.logo img {
+  width: 220px;
+  margin-top: -50px;
+}
+
+.profile img {
+  width: 150px;
+  object-fit: cover;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.tabs {
+  margin-top: 30px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  cursor: pointer;
+  color: #000000;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tab span {
+  margin-left: 40px;
+}
+
+.tab:hover {
+  background-color: #9f678c;
+  color: #fff;
+  text-decoration: none;
+}
+
+.para1 {
+  font-weight: bold;
+  font-size: 16;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.para2 {
+  margin-bottom: 70px;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: black;
+  /* transition: color 0.3s;  */
+}
+
+.tab a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.logout {
+  width: 100;
+  color: #fff;
+}
+
+.logout a {
+  text-decoration: none;
+  color: white;
+}
