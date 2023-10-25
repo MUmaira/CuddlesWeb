@@ -7,6 +7,7 @@ import Doctors from "./pages/Doctors";
 import Insights from "./pages/Insights";
 import Emergency from "./pages/Emergency";
 import Schedule from "./pages/Schedule";
+import UpdateDoctor from "./pages/UpdateDoctor";
 import { LoaderProvider, useLoader } from "./context/LoaderContext";
 import Login from "./pages/Authentication/Login";
 import Signup from "./pages/Authentication/Signup";
@@ -35,6 +36,7 @@ function App() {
             <Route path="/emergency/:id" Component={EmergencyDetails} />
             <Route path="/schedule" Component={Schedule} />
             <Route path="/addDoctor" Component={AddDoctor} />
+            <Route path="/updateDoctor/:id" Component={UpdateDoctor} />
           </Routes>
           <ToastContainer />
         </div>

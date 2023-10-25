@@ -6,6 +6,7 @@ export default class Doctor {
       address = '',
       contactNumber = '',
       designation ='',
+      image = '', 
     ) {
       this.firstName = firstName;
       this.lastName = lastName;
@@ -13,5 +14,6 @@ export default class Doctor {
       this.address = address;
       this.contactNumber = contactNumber;
       this.designation = designation;
+      this.image = image;
     }
   }

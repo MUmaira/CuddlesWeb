@@ -10,9 +10,23 @@
     height: 100%; /* Set sidebar to full height */
     z-index: 1;
     position: fixed;
+    overflow-y: auto;
   }
 
+  .sidebar::-webkit-scrollbar {
+    width: 0; 
+  }
   
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent; /* Make the track background transparent */
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    /* background-color: #888;  */
+    /* border-radius: 6px; */
+    background: transparent;
+  }
+
   .logo img {
     width: 220px;
     margin-top: -50px;
