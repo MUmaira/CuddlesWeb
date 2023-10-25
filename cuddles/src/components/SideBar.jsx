@@ -44,7 +44,7 @@ const SideBar = () => {
       </div>
       <div className="tab">
         <FaBell />
-        <Link to='doctors'style={{textDecoration:'none', color:'black'}} >
+        <Link to='/doctors'style={{textDecoration:'none', color:'black'}} >
         <span>Doctors</span>
         </Link>
       </div>

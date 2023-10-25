@@ -10,7 +10,7 @@ const Insights = () => {
   return (
     <div>
        
-          <Row>
+          <Row style={{marginTop: '1%'}}>
           <h2 className='title'> Patient Insights</h2>    
           <Dropdown style={{marginLeft: '25%'}}>
               <Dropdown.Toggle variant="success" id="dropdown-basic" style={{ backgroundColor: '#9f678c', borderColor: '#9f678c' }}>

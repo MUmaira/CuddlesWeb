@@ -7,6 +7,7 @@ import Doctors from "./pages/Doctors";
 import Insights from "./pages/Insights";
 import Emergency from "./pages/Emergency";
 import Schedule from "./pages/Schedule";
+import UpdateDoctor from "./pages/UpdateDoctor";
 import { LoaderProvider, useLoader } from "./context/LoaderContext";
 import Login from "./pages/Authentication/Login";
 import Signup from "./pages/Authentication/Signup";
@@ -16,6 +17,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Layout from "./components/Layout";
 import EmergencyDetails from "./components/EmergencyDetails";
+import AddDoctor from "./pages/AddDoctor";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
             <Route path="/emergency" Component={Emergency} />
             <Route path="/emergency/:id" Component={EmergencyDetails} />
             <Route path="/schedule" Component={Schedule} />
+            <Route path="/addDoctor" Component={AddDoctor} />
+            <Route path="/updateDoctor/:id" Component={UpdateDoctor} />
           </Routes>
           <ToastContainer />
         </div>
