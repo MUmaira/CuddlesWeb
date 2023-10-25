@@ -1,7 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Account.css";
+import { db } from "../config/firebase";
+import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 
 const Form = () => {
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    address: "",
+    email: "",
+    contactNumber: "",
+    designation: "",
+  });
+
+  const usersCollectionRef = collection(db, "caretakers");
+  const userId = "VDLg0Sh70MVwklhUyAoqAbV8oml2";
+
+  useEffect(() => {
+    const getUserDetails = async () => {
+      try {
+        const userDocRef = doc(usersCollectionRef, userId);
+        const userDoc = await getDoc(userDocRef);
+
+        if (userDoc.exists()) {
+          const userData = userDoc.data();
+          setUser(userData);
+        } else {
+          console.log("User not found");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    getUserDetails();
+  }, [userId]);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+
   return (
     <form className="form">
       <h2 style={{ marginBottom: "40px" }}> Personal Information </h2>
@@ -13,6 +55,8 @@ const Form = () => {
             type="text"
             placeholder="First name"
             name="firstName"
+            value={user.firstName}
+            onChange={handleInputChange}
           />
         </div>
         <div className="input-container">
@@ -22,6 +66,8 @@ const Form = () => {
             type="text"
             placeholder="Last name"
             name="lastName"
+            value={user.lastName}
+            onChange={handleInputChange}
           />
         </div>
       </div>
@@ -31,9 +77,18 @@ const Form = () => {
         type="text"
         placeholder="Address"
         name="address"
+        value={user.address}
+        onChange={handleInputChange}
       />
       <p className="p">Email</p>
-      <input className="input" type="text" placeholder="Email" name="email" />
+      <input
+        className="input"
+        type="text"
+        placeholder="Email"
+        name="email"
+        value={user.email}
+        onChange={handleInputChange}
+      />
       <div className="input-row">
         <div className="input-container">
           <p className="p">Contact Number</p>
@@ -42,6 +97,8 @@ const Form = () => {
             type="text"
             placeholder="Contact Number"
             name="contactNumber"
+            value={user.phoneNumber}
+            onChange={handleInputChange}
           />
         </div>
         <div className="input-container">
@@ -51,6 +108,8 @@ const Form = () => {
             type="text"
             placeholder="Designation"
             name="designation"
+            value={user.designation}
+            onChange={handleInputChange}
           />
         </div>
       </div>
