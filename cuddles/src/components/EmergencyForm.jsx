@@ -7,11 +7,15 @@ import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLocationArrow, faPhone} from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import Emergency from '../pages/Emergency';
 
 
-const EmergencyForm = () => {
+const EmergencyForm = ({emergencyData}) => {
 
   const navigate = useNavigate();
+  const timestamp = new Date(
+    emergencyData.timestamp.seconds * 1000 + emergencyData.timestamp.nanoseconds / 1000000
+  );
 
   return (
     <div>
@@ -20,29 +24,47 @@ const EmergencyForm = () => {
         <Card.Body style={{marginTop:"10px"}}>
         <Form>
          <Form.Group as={Row} className="mb-3">
-            <Form.Label column sm={2}>
-              Name 
+            <Form.Label column sm={3}>
+              Patient Name : 
             </Form.Label>
-            <Col sm={10}>
-               <Form.Control type="text" placeholder="patient name" />
+            <Col sm={9}>
+               <Form.Text> {emergencyData.userName} </Form.Text>
              </Col>
          </Form.Group>
 
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Form.Label column sm={2}>
-                  Address
+              <Form.Label column sm={3}>
+                  Contact Number :
               </Form.Label>
-            <Col sm={10}>
-               <Form.Control type="text" placeholder="Address" />
+            <Col sm={9}>
+            <Form.Text> {emergencyData.phoneNumber} </Form.Text>
              </Col>
            </Form.Group>
 
            <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Form.Label column sm={2}>
-                  Details
+              <Form.Label column sm={3}>
+                 Symptoms :
               </Form.Label>
-            <Col sm={10}>
-               <Form.Control as="textarea" rows={5} placeholder="Emergency Details" />
+            <Col sm={9}>
+            <Form.Text> {emergencyData.selectedReasons.join(', ')} </Form.Text>
+             </Col>
+           </Form.Group>
+
+           <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+              <Form.Label column sm={3}>
+                 Additional Details :
+              </Form.Label>
+            <Col sm={9}>
+            <Form.Text> {emergencyData.additionalNotes} </Form.Text>
+             </Col>
+           </Form.Group>
+
+           <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+              <Form.Label column sm={3}>
+                 Recorded Time :
+              </Form.Label>
+            <Col sm={9}>
+            <Form.Text>{timestamp.toLocaleString()}</Form.Text>
              </Col>
            </Form.Group>
            <Col>
