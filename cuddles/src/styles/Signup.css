@@ -1,5 +1,5 @@
 .regTitle {
-    margin-top: 4.5%;
+    margin-top: 20px;
     font-size: 25px;
     margin-left: 11%;
     margin-bottom: 1.5%;
@@ -43,11 +43,8 @@
 
 .regButton{
     padding: 7px;
-    width: 10%;
     font-size: 15px;
-    margin-right: 1%;
     font-weight: bold;
-    margin-left: 0%;
     margin-top: 15px;
     cursor: pointer;
     border-radius: 8px;

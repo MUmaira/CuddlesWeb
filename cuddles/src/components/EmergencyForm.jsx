@@ -24,47 +24,47 @@ const EmergencyForm = ({emergencyData}) => {
         <Card.Body style={{marginTop:"10px"}}>
         <Form>
          <Form.Group as={Row} className="mb-3">
-            <Form.Label column sm={3}>
-              Patient Name : 
+            <Form.Label column sm={3} style={{textAlign:'left'}}>
+              Patient Name 
             </Form.Label>
             <Col sm={9}>
-               <Form.Text> {emergencyData.userName} </Form.Text>
+               <Form.Control as='input' value={emergencyData.userName} style={{textAlign:'center'}} readOnly/>
              </Col>
          </Form.Group>
 
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Form.Label column sm={3}>
-                  Contact Number :
+              <Form.Label column sm={3} style={{textAlign:'left'}}>
+                  Contact Number 
               </Form.Label>
             <Col sm={9}>
-            <Form.Text> {emergencyData.phoneNumber} </Form.Text>
+            <Form.Control as='input' value={emergencyData.phoneNumber} style={{textAlign:'center'}} readOnly />
              </Col>
            </Form.Group>
 
            <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Form.Label column sm={3}>
-                 Symptoms :
+              <Form.Label column sm={3} style={{textAlign:'left'}}>
+                 Symptoms 
               </Form.Label>
             <Col sm={9}>
-            <Form.Text> {emergencyData.selectedReasons.join(', ')} </Form.Text>
+            <Form.Control as= 'input' value={emergencyData.selectedReasons.join(', ')} style={{textAlign:'center'}} readOnly/>
              </Col>
            </Form.Group>
 
            <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Form.Label column sm={3}>
-                 Additional Details :
+              <Form.Label column sm={3} style={{textAlign:'left'}}>
+                 Additional Details 
               </Form.Label>
             <Col sm={9}>
-            <Form.Text> {emergencyData.additionalNotes} </Form.Text>
+            <Form.Control as="input" value={emergencyData.additionalNotes} style={{textAlign:'center'}} readOnly />
              </Col>
            </Form.Group>
 
            <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Form.Label column sm={3}>
-                 Recorded Time :
+              <Form.Label column sm={3} style={{textAlign:'left'}}>
+                 Recorded Time 
               </Form.Label>
             <Col sm={9}>
-            <Form.Text>{timestamp.toLocaleString()}</Form.Text>
+            <Form.Control as='input' value={timestamp.toLocaleString()} style={{textAlign:'center'}} />
              </Col>
            </Form.Group>
            <Col>

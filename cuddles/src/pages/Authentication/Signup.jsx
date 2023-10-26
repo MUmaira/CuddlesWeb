@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import { getFirestore } from "firebase/firestore";
 import CareTaker from '../../Models/CareTaker';
+import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import { auth, db, doc, setDoc, getDocs } from '../../config/firebase';
 import React from 'react';
@@ -154,64 +155,76 @@ const Signup = () => {
     return (
         <div>
         <h2 className='regTitle'>Create an Account</h2>
+        <Card style={{ width: '40%', height:'700px', marginRight:'50px', marginLeft:'530px', marginBottom:'20px',boxShadow:'0 4px 8px rgba(0, 0, 0, 0.1)'}}>
+        <Card.Body>
         <form>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               id="firstName"
-              className="regInput"            
+              className="regInput"  
+              placeholder='Fiirst Name'          
               value={firstName}
+              style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9",textAlign:'center' }}
               onChange={(e) => {setFirstName(e.target.value);
                         }}
               errorMessage={error.firstName}
             />
           </div>
-          <div className="form-group">
+          <div>
             <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               id="lastName"
               className="regInput"
+              placeholder='Last Name'
               value={lastName}
+              style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9",  textAlign:'center' }}
               onChange={(e) => {setLastName(e.target.value);
             }}
               errorMessage={error.lastName}
 
             />
           </div>
-          <div className="divContainer">
+          <div>
             <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               className="regInput"
+              placeholder='Email'
               value={email}
+              style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9",textAlign:'center' }}
               onChange={(e) => {setEmail(e.target.value);
             }}
              
               errorMessage={error.email}
             />
           </div>
-          <div className="passwordContainer">
+          <div>
             <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               className="regInput"
+              placeholder='Password'
               value={password}
+              style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9",textAlign:'center' }}
               onChange={(e) => {setPassword(e.target.value);
             }}
               errorMessage={error.password}
             />
           </div>
-          <div className="contactContainer">
+          <div>
             <label htmlFor="phoneNumber">Phone Number</label>
             <input
               type="text"             
               id="phoneNumber"
               className="regInput"
+              placeholder='Phone Number'
               value={phoneNumber}
+              style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9", textAlign:'center' }}
               onChange={(e) => { setPhoneNumber(e.target.value);
             }}
              // onBlur={() => validate('phoneNumber')}
@@ -220,10 +233,15 @@ const Signup = () => {
           </div>
           <button
             type="button"
-            className="regButton"
+            //className="regButton"
             style={{
               backgroundColor: '#9F678C',
               color: 'white',
+              width:'50%',
+              padding:'10px',
+              border:'none',
+              cursor:'pointer',
+              borderRadius:'7px'
             }}
             onClick={handleSignUp}
           >
@@ -238,6 +256,8 @@ const Signup = () => {
          </p>
          </div>
         </form>
+        </Card.Body>
+        </Card>
         <ToastContainer />
       </div>
     )

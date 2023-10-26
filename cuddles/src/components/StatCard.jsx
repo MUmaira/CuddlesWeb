@@ -5,7 +5,7 @@ import { faSquareCheck, faStethoscope, faWarning } from '@fortawesome/free-solid
 
 const StatCard = () => {
   return (
-    <div style={{display:'flex', marginLeft:'185px', marginTop:'30px'}}>
+    <div style={{display:'flex', marginLeft:'200px', marginTop:'30px'}}>
      <Card  style={{ width: '18rem',marginLeft:"100px",marginTop:"20px",boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)',background:"transparent",overflow:"hidden",zIndex:"2" }}>
       <Card.Body>
         <Card.Title style={{color:'#666666'}}>
