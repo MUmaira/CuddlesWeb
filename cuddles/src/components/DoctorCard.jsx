@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareCheck, faStethoscope, faWarning, faCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faSquareCheck, faStethoscope, faWarning, faCircle, faPhone, faTrash, faPen } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { doc, deleteDoc } from 'firebase/firestore';
 import { db } from '../config/firebase'; 
@@ -36,34 +36,34 @@ const DoctorCard = ({ doctor, onDelete }) => {
 
   return (
     <div style={{ display: 'flex', marginLeft: '15%', marginTop: '30px' }}>
-      <Card style={{ width: '35rem', marginLeft: '130px', marginTop: '10px', boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)', background: 'transparent', overflow: 'hidden', zIndex: '2' }}>
+      <Card style={{ width: '35rem', marginLeft: '200px', marginTop: '0px', boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)', background: 'transparent', overflow: 'hidden', zIndex: '2' }}>
         <Card.Body style={{ display: 'flex' }}>
           <div style={{ width: '25%'}}>
             <Card.Img variant="left" src={doctor.image} style={{ width: '100%', height: '100%', borderRadius: '6px'}} />
           </div>
           <div style={{ flex: 2, paddingLeft: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'left'}}>
-          <FontAwesomeIcon icon={faCircle} style={{color:'#FF0000', marginLeft: '95%'}} />  
-            <Card.Title style={{ color: '#666666', fontSize: '20px', marginBottom: '10px', marginRight: '40%'}}>
-             Name: {doctor.firstName} {doctor.lastName}
+          <FontAwesomeIcon icon={faCircle} style={{color:'#00e400', marginLeft: '95%'}} />  
+            <Card.Title style={{ color: '#666666', fontSize: '20px', marginBottom: '10px', marginRight: '40%', textAlign:'left'}}>
+             Dr. {doctor.firstName} {doctor.lastName}
             </Card.Title>
-            <Card.Title style={{ color: '#666666', fontSize: '16px', marginBottom: '10px', marginRight: '50%'}}>
+            <Card.Text style={{ color: '#666666', fontSize: '16px', marginBottom: '10px', marginRight: '50%', textAlign:'left'}}>
              Designation:  {doctor.designation}
-            </Card.Title>
-            <Card.Title style={{ color: '#666666', fontSize: '16px', marginBottom: '15px', marginRight: '20%'}}>
+            </Card.Text>
+            <Card.Text style={{ color: '#666666', fontSize: '16px', marginBottom: '15px', marginRight: '20%', textAlign:"left"}}>
              Available Hours: {doctor.availableHrs}
-            </Card.Title>
+            </Card.Text>
             <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <Button 
               onClick={handleUpdateClick}
               style={{marginLeft: '18%',maxWidth:'150px',color: 'white', backgroundColor: '#5DADE2', borderColor: '#5DADE2', fontSize: '12px', width: '48%' }}>
               Update information
-              <FontAwesomeIcon icon={faPhone} style={{ marginLeft: '7px' }} />
+              <FontAwesomeIcon icon={faPen} style={{ marginLeft: '7px' }} />
             </Button>
             <Button 
              onClick={handleDeleteClick}
             style={{ maxWidth:'150px', color: 'white', backgroundColor: '#E88B6B', borderColor: '#E88B6B', fontSize: '12px', width: '48%' }}>
               Delete information
-              <FontAwesomeIcon icon={faPhone} style={{ marginLeft: '7px' }} />
+              <FontAwesomeIcon icon={faTrash} style={{ marginLeft: '7px' }} />
             </Button>
             </div>
           </div>

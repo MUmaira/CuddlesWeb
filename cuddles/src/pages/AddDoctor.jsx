@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { db,  storage } from '../config/firebase'; // Import your Firebase configuration
 import { ToastContainer, toast } from "react-toastify";
@@ -82,7 +82,7 @@ const AddDoctor = () => {
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
           background: 'transparent',
           zIndex: '1',
-          borderColor: '#FF9494',
+          borderColor: '#A9A9A9',
         }}
       >
         <Card.Text style={{ marginTop: '10px', fontSize: '25px', fontWeight: 'bold', color: '#85929E' }}>
@@ -98,6 +98,7 @@ const AddDoctor = () => {
                 <Form.Control
                   type="text"
                   placeholder="First Name"
+                  style={{textAlign:'center'}}
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
@@ -113,6 +114,7 @@ const AddDoctor = () => {
                   type="text"
                   placeholder="Last Name"
                   value={lastName}
+                  style={{textAlign:'center'}}
                   onChange={(e) => setLastName(e.target.value)}
                 />
               </Col>
@@ -127,6 +129,7 @@ const AddDoctor = () => {
                   type="email"
                   placeholder="Email"
                   value={email}
+                  style={{textAlign:'center'}}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </Col>
@@ -141,6 +144,7 @@ const AddDoctor = () => {
                   type="text"
                   placeholder="Address"
                   value={address}
+                  style={{textAlign:'center'}}
                   onChange={(e) => setAddress(e.target.value)}
                 />
               </Col>
@@ -155,6 +159,7 @@ const AddDoctor = () => {
                   type="text"
                   placeholder="Contact Number"
                   value={contactNumber}
+                  style={{textAlign:'center'}}
                   onChange={(e) => setContactNumber(e.target.value)}
                 />
               </Col>
@@ -169,6 +174,7 @@ const AddDoctor = () => {
                   type="text"
                   placeholder="Designation"
                   value={designation}
+                  style={{textAlign:'center'}}
                   onChange={(e) => setDesignation(e.target.value)}
                 />
               </Col>
@@ -183,6 +189,7 @@ const AddDoctor = () => {
                   type="text"
                   placeholder="available hours"
                   value={availableHrs}
+                  style={{textAlign:'center'}}
                   onChange={(e) => setAvailableHrs(e.target.value)}
                 />
               </Col>
@@ -208,16 +215,17 @@ const AddDoctor = () => {
               <Button
                 onClick={addDoctorInformation}
                 style={{
-                  marginLeft: '60%',
+                  width:'50%',
                   color: 'white',
-                  backgroundColor: '#2ECC71',
-                  borderColor: '#2ECC71',
+                  backgroundColor: '#429e7f',
+                  borderColor: '#429e7f',
                   marginTop: '30px',
                   marginBottom: '20px',
+                  fontWeight:'bold'
                 }}
               >
                 Add Doctor
-                <FontAwesomeIcon icon={faCheck} style={{ marginLeft: '30px' }} />
+                <FontAwesomeIcon icon={faArrowUp} style={{ marginLeft: '30px' }} />
               </Button>
             </Col>
           </Form>
