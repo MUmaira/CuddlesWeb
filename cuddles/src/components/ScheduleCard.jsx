@@ -10,6 +10,7 @@ const cardStyle = {
   alignItems: "center",
   padding: "20px",
   boxShadow: "3px 3px 3px 0px lightgrey",
+  marginLeft: '200px'
 };
 
 const leftStyle = {
