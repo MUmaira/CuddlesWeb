@@ -18,6 +18,7 @@ import "./App.css";
 import Layout from "./components/Layout";
 import EmergencyDetails from "./components/EmergencyDetails";
 import AddDoctor from "./pages/AddDoctor";
+import InsightDetails from "./pages/InsightDetails"
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/schedule" Component={Schedule} />
             <Route path="/addDoctor" Component={AddDoctor} />
             <Route path="/updateDoctor/:id" Component={UpdateDoctor} />
+            <Route path="/insightDetails/:id" Component={InsightDetails} />
           </Routes>
           <ToastContainer />
         </div>
