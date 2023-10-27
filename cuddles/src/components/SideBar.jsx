@@ -2,10 +2,14 @@ import React from 'react'
 import { FaHome, FaUser, FaCog, FaEnvelope, FaBell } from "react-icons/fa";
 import '../styles/SideBar.css'
 import Logo from '../assets/Cuddleslogo.png'
+import {auth, db} from '../config/firebase'; 
 import nurse from '../assets/nurse.jpg'
 import { Link } from 'react-router-dom';
 
 const SideBar = () => {
+
+  const user = auth.currentUser;
+
   return (
     <div className="sidebar">
     <div className="logo">
