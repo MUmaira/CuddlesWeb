@@ -51,15 +51,15 @@ const Doctors = () => {
   return (
     <div>
        
-          <Row style={{marginTop: '1%'}}>
+        
           <h2 className='title'> Doctors List</h2>            
-          </Row>  
+          
           <Button  style={{marginTop:'20px',width: '190px', color:'white',padding: '10px', backgroundColor:'#E88B6B', borderColor:'#E88B6B', marginBottom:'15px', marginLeft: '60%'}}
            onClick={()=> navigate(`/addDoctor`)}>
             Add doctor
                     <FontAwesomeIcon icon={faPlus} style={{marginLeft:'30px'}}/>
          </Button> 
-
+       
          {doctors.map((doctor) => (
         <DoctorCard key={doctor.id} doctor={doctor} onDelete={handleDeleteDoctor}/>
       ))}

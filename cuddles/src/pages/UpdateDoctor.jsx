@@ -73,7 +73,7 @@ const { id } = useParams();
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
           background: 'transparent',
           zIndex: '1',
-          borderColor: '#FF9494',
+          borderColor: '#A9A9A9',
         }}
       >
         <Card.Text style={{ marginTop: '10px', fontSize: '25px', fontWeight: 'bold', color: '#85929E' }}>

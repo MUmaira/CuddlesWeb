@@ -2,6 +2,7 @@ import React from 'react'
 import { useLoader } from '../../context/LoaderContext';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 import { getErrorMessage } from '../../utils/errorMessages';
 import { auth, db, doc, setDoc, getDocs } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -79,14 +80,18 @@ const Login = () => {
   return (
     <div>
     <h2 className='loginTitle'>Log into your account</h2>
+    <Card style={{ width: '40%', height:'350px', marginRight:'50px', marginLeft:'530px', marginBottom:'20px', boxShadow:'0 4px 8px rgba(0, 0, 0, 0.1)'}}>
+    <Card.Body>
     <form>
       <div className='divContainer'>
         <label className='labelText' htmlFor="email">Email</label>
+        <br/>
         <input
           type="email"
           id="email"
-          className="loginInput"
+          placeholder='Email'
           value={email}
+          style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9", textAlign:'center' }}
           onChange={(e) => {setEmail(e.target.value);
         }}
          
@@ -95,11 +100,13 @@ const Login = () => {
       </div>
       <div className='divContainer'>
         <label htmlFor="password" className='labelText'>Password</label>
+        <br/>
         <input
           type="password"
           id="password"
-          className="loginPassword"
+          placeholder='Password'
           value={password}
+          style={{ width: '90%', padding: '8px', marginBottom: '30px', borderRadius:"10px", border:"1px solid #A9A9A9", textAlign:'center' }}
           onChange={(e) => {setPassword(e.target.value);
         }}
           errorMessage={error.password}
@@ -108,10 +115,14 @@ const Login = () => {
 
       <button
         type="button"
-        className="loginButton"
         style={{
           backgroundColor: '#9F678C',
           color: 'white',
+          width:'50%',
+          padding:'10px',
+          border:'none',
+          cursor:'pointer',
+          borderRadius:'7px'
         }}
         onClick={handleLogin}
       >
@@ -119,7 +130,7 @@ const Login = () => {
       </button>
       <div className='noAccount'>
       <p>
-      Dont have an account?     
+      Do not have an account?     
        <span onClick={(e) => {
                         e.preventDefault();
                         navigate("/signup");
@@ -127,6 +138,8 @@ const Login = () => {
        </p>
      </div>
     </form>
+    </Card.Body>
+    </Card>
     <ToastContainer />
   </div>
   )
