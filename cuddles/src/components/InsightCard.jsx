@@ -13,7 +13,7 @@ const InsightCard = ({insightData, userData}) => {
 
   return (
     <div style={{display:'flex', marginLeft:'185px', marginTop:'30px'}}>
-     <Card  style={{ width: '30rem',marginLeft:"130px",marginTop:"10px",boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)',background:"transparent",overflow:"hidden",zIndex:"2" }}>
+     <Card  style={{ width: '30rem',marginLeft:"300px",marginTop:"10px",boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.1)',background:"transparent",overflow:"hidden",zIndex:"2" }}>
       <Card.Body style={{textAlign: 'left', marginLeft: '1%'}} >
         <FontAwesomeIcon icon={faCircle} style={{color:'#FF0000', marginLeft: '95%'}} />     
         <Card.Title style={{color:'#666666', fontSize: '15px'}}>
