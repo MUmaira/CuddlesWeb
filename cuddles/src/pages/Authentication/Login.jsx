@@ -71,7 +71,7 @@ const Login = () => {
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged((user) => {
         if (user) {
-          navigate('/dashboard');
+          navigate('/insights');
         }
       });
       return unsubscribe;
