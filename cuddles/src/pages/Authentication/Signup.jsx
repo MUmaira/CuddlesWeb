@@ -126,7 +126,7 @@ const Signup = () => {
           const userData = { ...newCareTaker };   
           await setDoc(userDocRef, userData);
           toast.success('Account created successfully.');
-          navigate('/dashboard')
+          navigate('/insights')
         } catch (error) {
           error && setIsLoading(false);
           toast.error(`Account creation failed.`);
